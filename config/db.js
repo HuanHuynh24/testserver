@@ -1,10 +1,10 @@
 const sql = require('mssql');
 
 const config = {
-    user: 'yourUsername',
-    password: 'yourPassword',
-    server: 'localhost',
-    database: 'yourDatabase',
+    user: 'sa',
+    password: 'huanhuynh2402',
+    server: 'localhost', 
+    database: 'laptrinhapp',
     options: {
         encrypt: true,
         trustServerCertificate: true
