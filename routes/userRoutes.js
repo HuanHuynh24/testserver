@@ -7,6 +7,6 @@ const router = express.Router();
 
 // Định nghĩa route cho phương thức POST
 router.post('/add-user', addUser);
-router.post('/get-user', getUser);
+router.get('/get-user', getUser);
 
 module.exports = router;
