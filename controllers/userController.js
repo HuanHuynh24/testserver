@@ -23,4 +23,18 @@ const addUser = async (req, res) => {
     }
 };
 
-module.exports = { addUser };
+const getUser = async (req, res) => {
+    // Lấy thông tin người dùng theo ID
+    //...
+    try {
+        const pool = await connectDB();
+        const result = await pool.request("select * from nguoidung")
+        res.status(200).send("thành công");
+    }
+    catch (err) {
+            console.error('L��i:', err);
+            res.status(500).send(`L��i khi lấy thông tin người dùng: ${err.message}`);
+        } 
+}
+
+module.exports = { addUser, getUser };
